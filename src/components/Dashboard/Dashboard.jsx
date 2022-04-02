@@ -55,7 +55,7 @@ const Dashboard = () => {
               </li>
               <li>
                 <Link
-                  to="/dashboard/allPataint"
+                  to="/dashboard/pataintDetails"
                   onClick={() => setMenu('list')}
                   className={`flex items-center space-x-2 focus:text-white focus:bg-[#0d53fc] hover:text-white hover:bg-[#0d53fc] px-3 py-2 rounded-md ${
                     menu === 'list' && 'bg-[#0d53fc] text-white'
