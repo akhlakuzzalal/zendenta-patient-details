@@ -1,3 +1,31 @@
 #dash-menu {
-  background-color: aqua;
+  background-color: #fbfbfc;
+}
+#dash-item {
+  background-color: #f2f5f9;
+}
+.item {
+  border-left: 2px solid #1f5297;
+  position: relative;
+}
+.item::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 40%;
+  background: #fff;
+  border: 2px solid #1f5297;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #0d53fc;
+  border-radius: 20px;
 }
