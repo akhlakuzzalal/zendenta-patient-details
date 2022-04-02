@@ -1,24 +1,19 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Dashboard from './components/Dashboard/Dashboard';
+import PataintList from './components/DashboardItems/Pataint/PataintList';
+import SinglePataintDetails from './components/DashboardItems/Pataint/SinglePataintDetails';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Dashboard />}>
+          <Route path="allPataint" element={<PataintList />} />
+          <Route path="pataintDetails" element={<SinglePataintDetails />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
