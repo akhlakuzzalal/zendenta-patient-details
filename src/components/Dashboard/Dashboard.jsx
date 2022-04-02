@@ -10,11 +10,14 @@ import { BsChevronDown } from 'react-icons/bs';
 import { CgProfile } from 'react-icons/cg';
 import { GoSettings } from 'react-icons/go';
 import { RiMoneyDollarCircleLine } from 'react-icons/ri';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 import logo from '../../images/logo.png';
+import SinglePataintDetails from '../DashboardItems/Pataint/SinglePataintDetails';
 import './dashboard.css';
 
 const Dashboard = () => {
+  const location = useLocation();
+  const isDetailsPage = location.pathname === '' || location.pathname === '/';
   const [doctor, setDoctor] = useState({});
   const [menu, setMenu] = useState('');
   useEffect(() => {
@@ -121,7 +124,7 @@ const Dashboard = () => {
         </div>
       </div>
       <div id="dash-item" className="col-span-5">
-        <Outlet />
+        {isDetailsPage ? <SinglePataintDetails /> : <Outlet />}
       </div>
     </div>
   );

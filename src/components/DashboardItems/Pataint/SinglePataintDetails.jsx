@@ -14,7 +14,7 @@ import AppointmentResult from './AppointmentResult';
 
 const SinglePataintDetails = () => {
   const [patient, setPatient] = useState({});
-  const [filter, setfilter] = useState('');
+  const [filter, setfilter] = useState('upcoming');
   const [file, setFiles] = useState({});
   const [pastAppointment, setPastAppointment] = useState({});
   const [upcommingAppointment, setUpcommingAppointment] = useState({});
